@@ -1,131 +1,190 @@
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    background-color: white;
+html {
+    font-family: sans-serif;
 }
 
-header{
-    height: 80px;
-    line-height: 80px;
+body {
     background-color: white;
+    margin: 0;
 }
 
-section{
+/* Header con logo e scritta affiancati in alto a sinistra */
+header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;   
+    background-color: white;
+    gap: 15px;            
+    position: fixed;     
+    top: 0;
+    left: 0;
+    width: 100%;
+ 
+}
+
+#logo img {
+    height: 50px;
+    display: block;
+}
+
+#scritta {
+    font-size: 45px;
+    font-weight: bold;
+    margin: 0;
+    user-select: none;
+    white-space: nowrap;  
+}
+
+main {
+    padding-top: 90px;
+}
+
+section {
     margin-bottom: 28px;
 }
 
-h2{
+/* Spazio tra i singoli task dentro ogni sezione */
+section > div {
+    margin-bottom: 15px;
+}
+
+h2 {
     font-size: x-large;
 }
 
-#logo, #scritta{
-    display: inline-block;
-}
-
-#scritta{
-    font-size: 45px;    
-}
-
-#logo{
-    vertical-align: middle;
-}
-
-#container-1{
+#container-1, #container-2 {
     background-color: white;
-    border-radius: 8px 8px 0px 0px;
-    margin: 50px 300px 3px;
-    padding: 20px 65px 14px;
-    width: 900px;    
+    max-width: 900px;
+    margin: 20px auto 55px auto;
+    padding: 20px 65px;
+    border-radius: 8px;
+    width: 90%;
+   
+}
+
+#container-1 {
+    border-radius: 8px 8px 0 0;
     height: 60px;
+    padding-top: 20px;
+    padding-bottom: 14px;
+    margin-bottom: 3px;
 }
 
-#container-2{
+#container-2 {
     background-color: white;
-    border-radius: 0px 0px 8px 8px;
-    margin: 2px 300px 55px;
-    padding: 40px 65px 55px;
+    border-radius: 0 0 8px 8px;
+    padding-top: 20px;
+    padding-bottom: 55px;
     height: 550px;
-    width: 900px;
+    max-width: 900px;
+    margin: 10px auto 55px auto;
+    width: 90%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
 }
 
-#container-1, #container-2{
-    background-color: white;
-    width: 900px;
-}
-
-#button1, #button2{
+#button-1, #button-2 {
     padding: 5px 9px;
     border-radius: 6px;
     font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+    border-width: 2px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-#button-1{
+#button-1 {
     background-color: #47adf1;
     color: white;
-    border: 2px solid #47adf1;    
+    border: 2px solid #47adf1;
 }
 
-#button-2{
+#button-1:hover {
+    background-color: #3798d9;
+    border-color: #3798d9;
+}
+
+#button-2 {
     background-color: white;
     color: #9b9d9f;
     border: 2px solid #9b9d9f;
 }
 
-.tick{
-    display: inline-block;
-    width: 23px;
-    color: #6bc3ad;
-    border-radius: 50%;
-    border: 1px solid #6bc3ad;
-    padding-left: 4px;
+#button-2:hover {
+    background-color: #f0f0f0;
+    color: #7a7c7f;
+    border-color: #7a7c7f;
 }
 
-.cross{
+.tick, .cross {
     display: inline-block;
     width: 23px;
-    color: #eb5952;
+    height: 23px;
+    line-height: 21px;
+    text-align: center;
     border-radius: 50%;
-    border: 1px solid #eb5952;
-    padding-left: 4px;
+    border: 1px solid;
+    font-weight: bold;
+    font-size: 14px;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+}
+
+.tick {
+    color: #6bc3ad;
+    border-color: #6bc3ad;
+}
+
+.cross {
+    color: #eb5952;
+    border-color: #eb5952;
 }
 
 .tasks {
     display: inline-block;
     margin-left: 8px;
-    margin-top: 11px;
-    margin-bottom: 8px;
+    vertical-align: middle;
+    line-height: 23px;
+    font-size: 16px;
+    user-select: none;
 }
 
 .sticker {
     display: inline-block;
-    color: white;    
-    padding: 4px 6px;
+    color: white;
+    padding: 4px 8px;
     border-radius: 14px;
     font-size: 11px;
     width: fit-content;
+    vertical-align: middle;
+    margin-left: 12px;
+    user-select: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
 }
 
-.editorial{
+/* Sticker colors */
+.editorial {
     background-color: #45abea;
 }
 
-.q1goals{
+.q1goals {
     background-color: #9c72e4;
 }
 
-.recruit{
+.recruit {
     background-color: #64c0a9;
 }
 
-.mobile{
+.mobile {
     background-color: #f29e33;
 }
 
-.website{
+.website {
     background-color: #d863a1;
 }
 
